@@ -110,7 +110,11 @@ public class Tabuleiro extends JPanel {
             System.err.format("Erro de E/S: %s%n", x);
         }
     }
-        
+
+    // Adicionar os demais Elementos 
+    // Chave verificar a imagem
+    //2 Vilão adicionar com a ação de moter aoa jogar s/arma
+    //implementar a arma no jogo 
     public ElementoBasico getElem(char elem, int lin, int col) {
         Random r = new Random();
         switch (elem) {

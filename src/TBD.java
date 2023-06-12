@@ -20,4 +20,10 @@ public class TBD extends ElementoBasico {
   public void acao3(ElementoBasico outro){
     //Abrir a porta com a chave
   }
+
+
+  //Vilão com ação de morte ao personagem
+  //Implemntação por turnos.
+
+  
 }
