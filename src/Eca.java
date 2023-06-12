@@ -9,6 +9,6 @@ public class Eca extends ElementoBasico {
 
     @Override
     public void acao(ElementoBasico outro) {
-
+       
     }
 }

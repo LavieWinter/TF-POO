@@ -1,5 +1,3 @@
-
-
 public class Personagem extends ElementoBasico {
     private ElementoBasico anterior;
 
