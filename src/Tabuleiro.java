@@ -122,10 +122,12 @@ public class Tabuleiro extends JPanel {
            case '.': return new Fundo("Fundo",lin,col,this);
            case '-': return new Eca("Dica",lin,col,this);
            case '?': return new Pista("Pista",r.nextInt(15), lin,col,this);
-           case '^': return new TBD("Chave","dog3.png",lin,col,this);
-           case '+': return new TBD("Porta","Porta.jpg",lin,col,this);     
+           case '^': return new TBD("Chave","Key.png",lin,col,this);
+           case '+': return new TBD("Porta","Porta.png",lin,col,this);
+           case '%': return new TBD("Vilao","Vilao.png",lin,col,this);
+           case '=': return new TBD("Espada","Espada.png",lin,col,this);          
            case '*': {  ElementoBasico anterior = new Fundo("Fundo",lin,col,this);
-                        principal = new Personagem("Mutley","mutley.jpg",lin,col,this);
+                        principal = new Personagem("Principal","PR.png",lin,col,this);
                         principal.setAnterior(anterior);
                         return principal;
                     }
