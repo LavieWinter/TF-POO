@@ -8,6 +8,11 @@ public class TBD extends ElementoBasico {
     String s = String.format("Action: %s (%d, %d)",
                       this.getId(),getLin(), getCol());
       System.out.println(s);
+      if(this.getId() == "Espada"){
+        this.getTabuleiro().getPrincipal().setEspada(true);
+        this.getTabuleiro().insereElemento(new Fundo("Fundo",getLin(),getCol(),this.getTabuleiro()));
+      }
+      System.out.println(this.getTabuleiro().getPrincipal().getEspada());
   }
 
   //Personagem deve passar a porta(pré requisito ter a chave)

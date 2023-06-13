@@ -65,6 +65,9 @@ public class Tabuleiro extends JPanel {
         }
         return celulas[lin][col];
     }
+    //public ElementoBasico removElementoBasico(int lin, int col){
+            
+    //}
 
     public ElementoBasico insereElemento(ElementoBasico elemento) {
         int lin = elemento.getLin();
