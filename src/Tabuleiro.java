@@ -18,6 +18,10 @@ public class Tabuleiro extends JPanel {
     public Tabuleiro() {
         super();
         // Cria o conjunto de células vazia e as insere no layout
+        this.createGrid();
+    }
+
+    public void createGrid(){
         celulas = new ElementoBasico[MAXLIN][MAXCOL];
         this.setLayout(new GridLayout(MAXLIN, MAXCOL));
         for (int i = 0; i < MAXLIN; i++) {
@@ -125,10 +129,10 @@ public class Tabuleiro extends JPanel {
            case '.': return new Fundo("Fundo",lin,col,this);
            case '-': return new Eca("Dica",lin,col,this);
            case '?': return new Pista("Pista",r.nextInt(15), lin,col,this);
-           case '^': return new TBD("Chave","Key.png",lin,col,this);
-           case '+': return new TBD("Porta","Porta.png",lin,col,this);
-           case '%': return new TBD("Vilao","Vilao.png",lin,col,this);
-           case '=': return new TBD("Espada","Espada.png",lin,col,this);          
+           case '^': return new Chave("Chave",lin,col,this);
+           case '+': return new Porta("Porta",lin,col,this);
+           case '%': return new Vilao("Vilao",lin,col,this);
+           case '=': return new Espada("Espada",lin,col,this);          
            case '*': {  ElementoBasico anterior = new Fundo("Fundo",lin,col,this);
                         principal = new Personagem("Principal","PR.png",lin,col,this);
                         principal.setAnterior(anterior);

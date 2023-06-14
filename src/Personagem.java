@@ -1,11 +1,12 @@
 public class Personagem extends ElementoBasico {
     private ElementoBasico anterior;
-
+    private Boolean chave;
     private Boolean espada;
 
     public Personagem(String id, String iconPath, int linInicial, int colInicial, Tabuleiro tabuleiro) {
         super(id, iconPath, linInicial, colInicial, tabuleiro);
         this.espada = false;
+        this.chave = false;
     }
 
     public void setEspada(Boolean espada){
@@ -14,6 +15,14 @@ public class Personagem extends ElementoBasico {
 
     public Boolean getEspada(){
         return espada;
+    }
+
+    public void setChave(boolean chave){
+        this.chave = chave;
+    }
+
+    public boolean getChave(){
+        return this.chave;
     }
 
     public void setAnterior(ElementoBasico anterior){
