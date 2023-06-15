@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 public class Espada extends ElementoBasico {
 
   public Espada(String id, int linInicial, int colInicial, Tabuleiro tabuleiro) {
@@ -13,6 +15,7 @@ public class Espada extends ElementoBasico {
       if(this.getId() == "Espada"){
         personagem.setEspada(true);
         tabuleiro.insereElemento(new Fundo("Fundo",getLin(),getCol(),this.getTabuleiro()));
+        JOptionPane.showMessageDialog(null, "Você adquiriu uma espada", "Novo item", JOptionPane.WARNING_MESSAGE);
       }
       System.out.println(this.getTabuleiro().getPrincipal().getEspada());
       }

@@ -15,6 +15,11 @@ public class Tabuleiro extends JPanel {
     
     private ElementoBasico[][] celulas;
     private Personagem principal;
+    private Vilao vilao;
+
+    public Vilao getVilao() {
+        return vilao;
+    }
 
     public Tabuleiro() {
         super();
@@ -133,7 +138,13 @@ public class Tabuleiro extends JPanel {
            case '?': return new Pista("Armadilha",r.nextInt(15), lin,col,this);
            case '^': return new Chave("Chave",lin,col,this);
            case '+': return new Porta("Porta",lin,col,this);
-           case '%': return new Vilao("Vilao",lin,col,this);
+           case '%': {  //for(){
+                            ElementoBasico ant = new Fundo("Fundo",lin,col,this);
+                            vilao = new Vilao("Vilao",lin,col,this);
+                            vilao.setAnt(ant);
+                            return vilao;
+                            }
+                    
            case '=': return new Espada("Espada",lin,col,this);          
            case '*': {  ElementoBasico anterior = new Fundo("Fundo",lin,col,this);
                         principal = new Personagem("Principal","PR.png",lin,col,this);

@@ -47,6 +47,7 @@ public class Personagem extends ElementoBasico {
         } else {
             this.anterior = getTabuleiro().insereElemento(this);
         }
+        this.getTabuleiro().getVilao().Move();
     }
 
     public void moveEsquerda() {
@@ -63,6 +64,8 @@ public class Personagem extends ElementoBasico {
         } else {
             this.anterior = getTabuleiro().insereElemento(this);
         }
+
+          this.getTabuleiro().getVilao().Move();
     }
 
     public void moveCima() {
@@ -79,6 +82,7 @@ public class Personagem extends ElementoBasico {
         } else {
             this.anterior = getTabuleiro().insereElemento(this);
         }
+                  this.getTabuleiro().getVilao().Move();
     }
 
     public void moveBaixo() {
@@ -95,6 +99,7 @@ public class Personagem extends ElementoBasico {
         } else {
             this.anterior = getTabuleiro().insereElemento(this);
         }
+                  this.getTabuleiro().getVilao().Move();
     }
 
     @Override
