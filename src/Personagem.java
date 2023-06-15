@@ -9,30 +9,30 @@ public class Personagem extends ElementoBasico {
         this.chave = false;
     }
 
-    public void setEspada(Boolean espada){
+    public void setEspada(Boolean espada) {
         this.espada = espada;
     }
 
-    public Boolean getEspada(){
+    public Boolean getEspada() {
         return espada;
     }
 
-    public void setChave(boolean chave){
+    public void setChave(boolean chave) {
         this.chave = chave;
     }
 
-    public boolean getChave(){
+    public boolean getChave() {
         return this.chave;
     }
 
-    public void setAnterior(ElementoBasico anterior){
+    public void setAnterior(ElementoBasico anterior) {
         this.anterior = anterior;
     }
 
     public ElementoBasico getAnterior() {
         return anterior;
     }
-    
+
     public void moveDireita() {
         // Remove o Personagem da posicao atual e avança
         getTabuleiro().insereElemento(anterior);
@@ -47,7 +47,9 @@ public class Personagem extends ElementoBasico {
         } else {
             this.anterior = getTabuleiro().insereElemento(this);
         }
-        this.getTabuleiro().getVilao().Move();
+        if (getTabuleiro().getVilao() != null) {
+            getTabuleiro().getVilao().Move();
+        }
     }
 
     public void moveEsquerda() {
@@ -65,7 +67,9 @@ public class Personagem extends ElementoBasico {
             this.anterior = getTabuleiro().insereElemento(this);
         }
 
-          this.getTabuleiro().getVilao().Move();
+        if (getTabuleiro().getVilao() != null) {
+            getTabuleiro().getVilao().Move();
+        }
     }
 
     public void moveCima() {
@@ -82,7 +86,9 @@ public class Personagem extends ElementoBasico {
         } else {
             this.anterior = getTabuleiro().insereElemento(this);
         }
-                  this.getTabuleiro().getVilao().Move();
+        if (getTabuleiro().getVilao() != null) {
+            getTabuleiro().getVilao().Move();
+        }
     }
 
     public void moveBaixo() {
@@ -99,7 +105,9 @@ public class Personagem extends ElementoBasico {
         } else {
             this.anterior = getTabuleiro().insereElemento(this);
         }
-                  this.getTabuleiro().getVilao().Move();
+        if (getTabuleiro().getVilao() != null) {
+            getTabuleiro().getVilao().Move();
+        }
     }
 
     @Override
@@ -107,5 +115,4 @@ public class Personagem extends ElementoBasico {
         throw new UnsupportedOperationException("Unimplemented method 'acao'");
     }
 
-   
 }

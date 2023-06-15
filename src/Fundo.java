@@ -1,8 +1,8 @@
-public class Fundo extends ElementoBasico{
+public class Fundo extends ElementoBasico {
 
-    public Fundo(String id, int linInicial, int colInicial, Tabuleiro tabuleiro) {
-        super(id, "floor.png", linInicial, colInicial, tabuleiro);
-        
+    public Fundo(String id, String iconPath, int linInicial, int colInicial, Tabuleiro tabuleiro) {
+        super(id, iconPath, linInicial, colInicial, tabuleiro);
+
     }
 
     @Override
