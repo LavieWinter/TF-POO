@@ -19,18 +19,19 @@ public class App extends JFrame implements ActionListener{
         tabuleiro = new Tabuleiro();
         
         JPanel botoesDirecao = new JPanel(new FlowLayout());
-        JButton butDir = new JButton("Direita");
-        butDir.addActionListener(this);
         JButton butEsq = new JButton("Esquerda");
         butEsq.addActionListener(this);
         JButton butCima = new JButton("Acima");
         butCima.addActionListener(this);
         JButton butBaixo = new JButton("Abaixo");
         butBaixo.addActionListener(this);
+        JButton butDir = new JButton("Direita");
+        butDir.addActionListener(this);               
         botoesDirecao.add(butEsq);
-        botoesDirecao.add(butDir);
         botoesDirecao.add(butCima);
         botoesDirecao.add(butBaixo);
+        botoesDirecao.add(butDir);
+        
         
         JPanel painelGeral = new JPanel();
         painelGeral.setLayout(new BoxLayout(painelGeral, BoxLayout.PAGE_AXIS));
@@ -41,10 +42,11 @@ public class App extends JFrame implements ActionListener{
         tabuleiro.loadLevel(1);
         personagem = tabuleiro.getPrincipal();
         personagem.setAnterior(personagem.getAnterior());
+        
         // personagem = new Personagem("Feliz","icone.jpg",2,0,tabuleiro);
         // ElementoBasico anterior = tabuleiro.insereElemento(personagem);
         // personagem.setAnterior(anterior);
-
+       
         // Pista pista1 = new Pista("Pista15",15,2,4,tabuleiro);
         // tabuleiro.insereElemento(pista1);
         // Pista pista2 = new Pista("Pista22",22,0,2,tabuleiro);
@@ -56,7 +58,7 @@ public class App extends JFrame implements ActionListener{
         this.add(painelGeral);
 
         this.setSize(1100,1100);
-        this.setTitle("Jogo Demo");
+        this.setTitle("Dungeon Escape");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
         tabuleiro.atualizaVisualizacao();

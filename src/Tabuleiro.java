@@ -9,10 +9,11 @@ import java.nio.file.Paths;
 import java.util.Random;
 
 public class Tabuleiro extends JPanel {
+    
     private static final int MAXLIN = 12;
     private static final int MAXCOL = 12;
+    
     private ElementoBasico[][] celulas;
-
     private Personagem principal;
 
     public Tabuleiro() {
@@ -107,6 +108,7 @@ public class Tabuleiro extends JPanel {
                     if (line.charAt(col) != ' ') {
                     ElementoBasico elem = this.getElem(line.charAt(col), lin, col);
                     this.insereElemento(elem);
+                    atualizaVisualizacao();
                     }
                 }
                 lin++;
@@ -128,7 +130,7 @@ public class Tabuleiro extends JPanel {
            case ' ': return new Fundo("Fundo",lin,col,this);
            case '.': return new Fundo("Fundo",lin,col,this);
            case '-': return new Eca("Dica",lin,col,this);
-           case '?': return new Pista("Pista",r.nextInt(15), lin,col,this);
+           case '?': return new Pista("Armadilha",r.nextInt(15), lin,col,this);
            case '^': return new Chave("Chave",lin,col,this);
            case '+': return new Porta("Porta",lin,col,this);
            case '%': return new Vilao("Vilao",lin,col,this);

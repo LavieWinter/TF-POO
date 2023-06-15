@@ -16,7 +16,7 @@ public class Vilao extends ElementoBasico {
         else{
           // Se não tiver a espada ele morre. Printar no centro em branco que o personagem morreu
           System.out.println("morreu");
-          JOptionPane.showMessageDialog(null, "Se fodeu!", "Wasted!", JOptionPane.WARNING_MESSAGE);
+          JOptionPane.showMessageDialog(null, "Você foi derrotado", "Morreu", JOptionPane.WARNING_MESSAGE);
           tabuleiro.setVisible(false);
         }
     }
