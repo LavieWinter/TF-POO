@@ -117,7 +117,7 @@ public class Vilao extends ElementoBasico {
     if (personagem.getEspada()) {
       System.out.println("Matou");
       tabuleiro.setVilao(null);
-      tabuleiro.insereElemento(new Fundo("Restos", "ossos.png", getLin(), getCol(), this.getTabuleiro()));
+      tabuleiro.insereElemento(new Fundo("Restos", "skull.png", getLin(), getCol(), this.getTabuleiro()));
     } else {
       // Se não tiver a espada ele morre. Printar no centro em branco que o personagem
       // morreu
