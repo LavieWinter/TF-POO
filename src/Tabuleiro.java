@@ -132,7 +132,7 @@ public class Tabuleiro extends JPanel {
             case '-':
                 return new Eca("Dica", lin, col, this);
             case '?':
-                return new Pista("Armadilha", r.nextInt(15), lin, col, this);
+                return new Armadilha("Armadilha", lin, col, this);
             case '^':
                 return new Chave("Chave", lin, col, this);
             case '+':
@@ -167,6 +167,21 @@ public class Tabuleiro extends JPanel {
     // tabuleiro.insereElemento(pista2);
     // Eca eca = new Eca("Eca2215",2215,4,2,tabuleiro);
     // tabuleiro.insereElemento(eca);
+
+    public void pistaArmadilha(Personagem personagem){       
+        for (int i = 0; i < MAXLIN; i++) {
+            for (int j = 0; j < MAXCOL; j++) {
+                ElementoBasico elemento = celulas[i][j];
+                if (elemento instanceof Armadilha){
+                    
+                    int posicao = Math.abs(personagem.getLin() - elemento.getLin()) + Math.abs(personagem.getCol() - elemento.getCol());
+                    if (posicao == 1){
+                        Armadilha armadilha = (Armadilha) elemento;
+                        armadilha.setImage(createImageIcon("Armadilha.png"));
+                    }
+                }
+    }
+}}
 
     public Personagem getPrincipal() {
         return principal;
