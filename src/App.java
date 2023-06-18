@@ -41,6 +41,8 @@ public class App extends JFrame implements ActionListener {
         personagem = tabuleiro.getPrincipal();
         personagem.setAnterior(personagem.getAnterior());
 
+     
+
         // personagem = new Personagem("Feliz","icone.jpg",2,0,tabuleiro);
         // ElementoBasico anterior = tabuleiro.insereElemento(personagem);
         // personagem.setAnterior(anterior);
@@ -60,6 +62,7 @@ public class App extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
         tabuleiro.atualizaVisualizacao();
+        tabuleiro.pistaArmadilha(personagem);
     }
 
     @Override
@@ -78,6 +81,7 @@ public class App extends JFrame implements ActionListener {
             personagem.moveBaixo();
         }
         tabuleiro.atualizaVisualizacao();
+        tabuleiro.pistaArmadilha(personagem);
     }
 
     public static void main(String[] args) {
