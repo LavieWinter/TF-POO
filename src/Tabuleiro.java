@@ -177,7 +177,7 @@ public class Tabuleiro extends JPanel {
                     int posicao = Math.abs(personagem.getLin() - elemento.getLin()) + Math.abs(personagem.getCol() - elemento.getCol());
                     if (posicao == 1){
                         Armadilha armadilha = (Armadilha) elemento;
-                        armadilha.setImage(createImageIcon("Armadilha.png"));
+                        armadilha.setImage(createImageIcon("trap.png"));
                     }
                 }
     }

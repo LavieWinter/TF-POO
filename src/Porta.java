@@ -10,11 +10,12 @@ public class Porta extends ElementoBasico {
         Tabuleiro tabuleiro = this.getTabuleiro();
         Personagem personagem = tabuleiro.getPrincipal();
         if (personagem.getChave()) {
-            JOptionPane.showMessageDialog(null, "Parabéns!! Você passou de fase", "Vitória!!!",
+            JOptionPane.showMessageDialog(null, "Parabéns, a porta foi aberta!", "Vitória!!!",
                     JOptionPane.INFORMATION_MESSAGE);
-            tabuleiro.loadLevel(2);
-            personagem = tabuleiro.getPrincipal();
-            personagem.setAnterior(personagem.getAnterior());
+                    System.exit(ABORT);
+            //tabuleiro.loadLevel(2);
+            //personagem = tabuleiro.getPrincipal();
+            //personagem.setAnterior(personagem.getAnterior());
 
         } else {
             JOptionPane.showMessageDialog(null, "Porta Trancada, procure a chave", "Trancado",

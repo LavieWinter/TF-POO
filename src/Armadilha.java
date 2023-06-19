@@ -13,7 +13,8 @@ public class Armadilha extends ElementoBasico{
     Tabuleiro tabuleiro = this.getTabuleiro();               
     System.out.println("morreu");
     JOptionPane.showMessageDialog(null, "Você caiu na armadilha, preste mais atenção", "Morreu", JOptionPane.WARNING_MESSAGE);
-    tabuleiro.setVisible(false);
+    //tabuleiro.setVisible(false);
+    System.exit(ABORT);
     }
   }
 

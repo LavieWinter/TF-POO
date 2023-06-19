@@ -123,7 +123,8 @@ public class Vilao extends ElementoBasico {
       // morreu
       System.out.println("morreu");
       JOptionPane.showMessageDialog(null, "Você foi derrotado", "Morreu", JOptionPane.WARNING_MESSAGE);
-      tabuleiro.setVisible(false);
+      //tabuleiro.setVisible(false);
+      System.exit(ABORT);
     }
   }
 }
